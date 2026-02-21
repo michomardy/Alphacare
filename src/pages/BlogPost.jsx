@@ -26,6 +26,13 @@ function estimateReadTime(html) {
   return words ? `${Math.max(1, Math.round(words / 220))} min read` : null;
 }
 
+function toIsoDate(input) {
+  // Accepts: "Jan 10, 2026", "February 16, 2026", ISO strings, etc.
+  const d = new Date(input);
+  if (Number.isNaN(d.getTime())) return null;
+  return d.toISOString().slice(0, 10);
+}
+
 /* =========================
    FAQ SCHEMA
 ========================= */
@@ -120,9 +127,7 @@ function RelatedServiceCard({ relatedServiceId }) {
     <section className="mt-10 rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-sm font-semibold text-physio-blue">
-            {related.label}
-          </p>
+          <p className="text-sm font-semibold text-physio-blue">{related.label}</p>
           <h3 className="mt-1 text-xl font-extrabold text-physio-blue-dark">
             {related.title}
           </h3>
@@ -166,12 +171,8 @@ function RelatedArticles({ currentSlug, relatedServiceId }) {
             to={`/blog/${p.slug}`}
             className="rounded-2xl border border-gray-100 p-4 transition hover:shadow-sm"
           >
-            <div className="font-extrabold text-physio-blue-dark">
-              {p.title}
-            </div>
-            {p.excerpt && (
-              <div className="mt-1 text-sm text-gray-600">{p.excerpt}</div>
-            )}
+            <div className="font-extrabold text-physio-blue-dark">{p.title}</div>
+            {p.excerpt && <div className="mt-1 text-sm text-gray-600">{p.excerpt}</div>}
           </Link>
         ))}
       </div>
@@ -187,10 +188,7 @@ export default function BlogPost() {
   const navigate = useNavigate();
   const contentRef = useRef(null);
 
-  const post = useMemo(
-    () => blogPosts.find((p) => p.slug === slug),
-    [slug]
-  );
+  const post = useMemo(() => blogPosts.find((p) => p.slug === slug), [slug]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -216,7 +214,6 @@ export default function BlogPost() {
 
       e.preventDefault();
       navigate(href, { replace: false });
-
     };
 
     root.addEventListener("click", onClick);
@@ -228,76 +225,69 @@ export default function BlogPost() {
   const readTime = post.readTime || estimateReadTime(post.content);
   const faqSchema = buildFaqSchema(post);
 
+  const postUrl = `https://alphacarephysio.com.au/blog/${post.slug}`;
+  const isoDate = toIsoDate(post.date);
+  const description =
+    post.metaDescription ||
+    post.excerpt ||
+    "AlphaCare Physiotherapy — evidence-based treatment for pain, injuries, and mobility. Book online or call 1300 433 233.";
+
+  const ogImage = post.image || "https://alphacarephysio.com.au/images/og-default.webp";
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${postUrl}#blogposting`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    headline: post.title,
+    description,
+    image: ogImage ? [ogImage] : undefined,
+    datePublished: isoDate || undefined,
+    dateModified: isoDate || undefined,
+    author: { "@type": "Person", name: post.author || "AlphaCare Physiotherapy" },
+    publisher: {
+      "@type": "Organization",
+      name: "AlphaCare Physiotherapy",
+      url: "https://alphacarephysio.com.au",
+      logo: { "@type": "ImageObject", url: "https://alphacarephysio.com.au/og.jpg" },
+    },
+    articleSection: post.category || undefined,
+    keywords: post.keywords
+      ? post.keywords.split(",").map((k) => k.trim()).filter(Boolean)
+      : undefined,
+    inLanguage: "en-AU",
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-4 pb-16 pt-10">
       <Helmet>
-        <title>{post.title} | AlphaCare Physiotherapy</title>
-        <meta
-          name="description"
-          content={post.metaDescription || post.excerpt || ""}
-        />
+        <title>
+          {post?.title ? `${post.title} | AlphaCare Physiotherapy` : "AlphaCare Physiotherapy"}
+        </title>
+        <meta name="description" content={description} />
 
         {/* Canonical */}
-        <link
-          rel="canonical"
-          href={`https://alphacarephysio.com.au/blog/${post.slug}`}
-        />
+        <link rel="canonical" href={postUrl} />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content={`${post.title} | AlphaCare Physiotherapy`}
-        />
-        <meta
-          property="og:description"
-          content={post.metaDescription || post.excerpt || ""}
-        />
-        <meta
-          property="og:url"
-          content={`https://alphacarephysio.com.au/blog/${post.slug}`}
-        />
-        <meta
-          property="og:image"
-          content={post.image || "https://alphacarephysio.com.au/images/og-default.webp"}
-        />
+        <meta property="og:title" content={`${post.title} | AlphaCare Physiotherapy`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={postUrl} />
+        <meta property="og:image" content={ogImage} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
-        <meta
-          name="twitter:description"
-          content={post.metaDescription || post.excerpt || ""}
-        />
-        <meta
-          name="twitter:image"
-          content={post.image || "https://alphacarephysio.com.au/images/og-default.webp"}
-        />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
 
-        {/* Article schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: post.title,
-            description: post.metaDescription || post.excerpt || "",
-            author: { "@type": "Person", name: post.author },
-            datePublished: post.date,
-            image: post.image,
-            publisher: {
-              "@type": "Organization",
-              name: "AlphaCare Physiotherapy",
-              url: "https://alphacarephysio.com.au",
-            },
-            mainEntityOfPage: `https://alphacarephysio.com.au/blog/${post.slug}`,
-          })}
-        </script>
+        {/* BlogPosting schema */}
+        <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
 
         {/* FAQ schema */}
         {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         )}
       </Helmet>
 
@@ -306,9 +296,7 @@ export default function BlogPost() {
           {post.title}
         </h1>
 
-        {post.excerpt && (
-          <p className="mt-3 text-lg text-gray-700">{post.excerpt}</p>
-        )}
+        {post.excerpt && <p className="mt-3 text-lg text-gray-700">{post.excerpt}</p>}
 
         <PostMeta author={post.author} date={post.date} readTime={readTime} />
       </header>
@@ -328,10 +316,7 @@ export default function BlogPost() {
       />
 
       <RelatedServiceCard relatedServiceId={post.relatedServiceId} />
-      <RelatedArticles
-        currentSlug={post.slug}
-        relatedServiceId={post.relatedServiceId}
-      />
+      <RelatedArticles currentSlug={post.slug} relatedServiceId={post.relatedServiceId} />
     </main>
   );
 }
