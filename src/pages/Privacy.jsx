@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, Users, FileText, Mail } from 'lucide-react';
 
@@ -95,10 +95,12 @@ const Privacy = () => {
     <>
       <Helmet>
         <title>Privacy Policy - AlphaCare Physiotherapy</title>
-        <meta 
-          name="description" 
-          content="Privacy Policy for AlphaCare Physiotherapy. Learn how we collect, use, and protect your personal and health information in compliance with Australian privacy laws." 
+        <meta
+          name="description"
+          content="Privacy Policy for AlphaCare Physiotherapy. Learn how we collect, use, and protect your personal and health information in compliance with Australian privacy laws."
         />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://alphacarephysio.com.au/privacy" />
       </Helmet>
 
       <div className="bg-gradient-to-br from-physio-neutral-50 to-white min-h-screen">
@@ -152,7 +154,7 @@ const Privacy = () => {
                       {section.title}
                     </h2>
                   </div>
-                  
+
                   <div className="space-y-6">
                     {section.content.map((item, itemIndex) => (
                       <div key={itemIndex}>
@@ -184,7 +186,7 @@ const Privacy = () => {
                     Cookies and Tracking Technologies
                   </h2>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold text-physio-neutral-800 mb-3">
@@ -194,7 +196,7 @@ const Privacy = () => {
                       Our website uses cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and understand user preferences. Cookies are small text files stored on your device that help us remember your preferences and improve our services.
                     </p>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-semibold text-physio-neutral-800 mb-3">
                       Managing Cookies
@@ -241,11 +243,11 @@ const Privacy = () => {
                     Contact Us About Privacy
                   </h2>
                 </div>
-                
+
                 <p className="text-white/90 leading-relaxed mb-6">
                   If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please contact us:
                 </p>
-                
+
                 <div className="space-y-3 mb-8">
                   <p className="text-white/90">
                     <span className="font-semibold">AlphaCare Physiotherapy</span>

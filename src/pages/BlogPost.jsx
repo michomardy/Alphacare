@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 
@@ -236,6 +236,64 @@ export default function BlogPost() {
           name="description"
           content={post.metaDescription || post.excerpt || ""}
         />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href={`https://alphacarephysio.com.au/blog/${post.slug}`}
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content={`${post.title} | AlphaCare Physiotherapy`}
+        />
+        <meta
+          property="og:description"
+          content={post.metaDescription || post.excerpt || ""}
+        />
+        <meta
+          property="og:url"
+          content={`https://alphacarephysio.com.au/blog/${post.slug}`}
+        />
+        <meta
+          property="og:image"
+          content={post.image || "https://alphacarephysio.com.au/images/og-default.webp"}
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta
+          name="twitter:description"
+          content={post.metaDescription || post.excerpt || ""}
+        />
+        <meta
+          name="twitter:image"
+          content={post.image || "https://alphacarephysio.com.au/images/og-default.webp"}
+        />
+
+        {/* Article schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.metaDescription || post.excerpt || "",
+            author: { "@type": "Person", name: post.author },
+            datePublished: post.date,
+            image: post.image,
+            publisher: {
+              "@type": "Organization",
+              name: "AlphaCare Physiotherapy",
+              url: "https://alphacarephysio.com.au",
+            },
+            mainEntityOfPage: `https://alphacarephysio.com.au/blog/${post.slug}`,
+          })}
+        </script>
+
+        {/* FAQ schema */}
         {faqSchema && (
           <script type="application/ld+json">
             {JSON.stringify(faqSchema)}

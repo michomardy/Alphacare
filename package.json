@@ -5,10 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "vite --host :: --port 3000",
+    "build:client": "vite build --config vite.client.config.js",
+    "build:server": "vite build --config vite.server.config.js",
+    "generate:static": "node scripts/prerender.js",
     "build:sitemap": "node scripts/generate-sitemap.mjs",
-    "prebuild": "npm run build:sitemap",
     "build": "node tools/generate-llms.js || true && vite build",
     "preview": "vite preview --host :: --port 3000",
+    "preview:static": "npx serve dist/static",
     "lint": "eslint . --quiet"
   },
   "dependencies": {
@@ -35,7 +38,7 @@
     "lucide-react": "^0.469.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.16.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",

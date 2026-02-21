@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link, useSearchParams } from "react-router-dom";
 import { Calendar, User, Clock, ArrowRight } from "lucide-react";
@@ -57,8 +57,27 @@ const Blog = () => {
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
 
-        {/* ✅ Canonical: pagination always points to /blog */}
+        {/* Canonical: pagination always points to /blog */}
         <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Physiotherapy Blog | AlphaCare Physiotherapy Marion" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta
+          property="og:image"
+          content="https://alphacarephysio.com.au/images/og-default.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Physiotherapy Blog | AlphaCare Physiotherapy Marion" />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta
+          name="twitter:image"
+          content="https://alphacarephysio.com.au/images/og-default.webp"
+        />
       </Helmet>
 
       {/* =========================

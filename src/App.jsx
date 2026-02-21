@@ -1,35 +1,29 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+
+import React from 'react';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
-import Home from '@/pages/Home'; // Critical Path: Eager load Home for better LCP
 
-// Performance: Lazy load secondary pages to split code bundles
-const About = lazy(() => import('@/pages/About'));
-const Services = lazy(() => import('@/pages/Services'));
-const Contact = lazy(() => import('@/pages/Contact'));
-const Booking = lazy(() => import('@/pages/Booking'));
-const Blog = lazy(() => import('@/pages/Blog'));
-const BlogPost = lazy(() => import('@/pages/BlogPost'));
-const Privacy = lazy(() => import('@/pages/Privacy'));
-
-// Simple loading fallback
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-white">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
-  </div>
-);
+// Eager imports required for Static Site Generation (prerendering)
+// Standard lazy loading causes empty content during SSR renderToString
+import Home from '@/pages/Home';
+import About from '@/pages/About';
+import Services from '@/pages/Services';
+import Contact from '@/pages/Contact';
+import Booking from '@/pages/Booking';
+import Blog from '@/pages/Blog';
+import BlogPost from '@/pages/BlogPost';
+import Privacy from '@/pages/Privacy';
 
 // Layout Component for standard pages
 const MainLayout = () => (
   <div className="min-h-screen flex flex-col bg-white">
     <Header />
     <main className="flex-grow contain-layout">
-      <Suspense fallback={<PageLoader />}>
-        <Outlet />
-      </Suspense>
+      <Outlet />
     </main>
     <Footer />
   </div>
@@ -37,7 +31,7 @@ const MainLayout = () => (
 
 function App() {
   return (
-    <Router>
+    <HelmetProvider>
       <Analytics />
       <Routes>
         {/* Main Application Routes wrapped in Layout */}
@@ -53,7 +47,7 @@ function App() {
         </Route>
       </Routes>
       <Toaster />
-    </Router>
+    </HelmetProvider>
   );
 }
 

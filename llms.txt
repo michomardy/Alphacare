@@ -1,0 +1,13 @@
+# AlphaCare Physiotherapy
+
+> Evidence-based physiotherapy in Marion & Mitchell Park, South Australia.
+> Led by Dr Michael Ghattas (DPT). Services include sports injury rehabilitation,
+> dry needling, post-surgical rehabilitation, neck & back pain, and chronic pain management.
+
+## Pages
+
+- [Home](https://alphacarephysio.com.au/): Physiotherapy clinic in Marion & Mitchell Park SA. Book online or call 1300 433 233.
+- [About](https://alphacarephysio.com.au/about): About our team and evidence-based approach to physiotherapy care.
+- [Services](https://alphacarephysio.com.au/services): Sports injury rehab, recovery sessions, dry needling, post-surgical rehabilitation, headache & dizziness management.
+- [Blog](https://alphacarephysio.com.au/blog): Patient education articles on injuries, recovery, and physiotherapy topics.
+- [Contact](https://alphacarephysio.com.au/contact): Book an appointment or get in touch with our Marion clinic.

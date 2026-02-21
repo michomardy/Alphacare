@@ -58,7 +58,6 @@ function generateSitemap() {
   const staticRoutes = [
     { loc: "/",        priority: "1.0", changefreq: "daily" },
     { loc: "/services",priority: "0.9", changefreq: "weekly" },
-    { loc: "/booking", priority: "0.9", changefreq: "weekly" },
     { loc: "/blog",    priority: "0.8", changefreq: "daily" },
     { loc: "/about",   priority: "0.7", changefreq: "yearly" },
     { loc: "/contact", priority: "0.7", changefreq: "yearly" },
