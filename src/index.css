@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Physiotherapy Theme Variables */
+  --primary-blue: #0284C7;
+  --primary-teal: #06B6D4;
+  --accent-green: #10B981;
+  --background-light: #F8FAFC;
+  --background-white: #FFFFFF;
+  --text-dark: #0F172A;
+  --text-medium: #475569;
+  --border-light: #E2E8F0;
+
+  --background: 210 40% 98%; /* Slate 50 */
+  --foreground: 222 47% 11%; /* Slate 900 */
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 199 89% 48%; /* Sky 600 */
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 189 94% 43%; /* Cyan 500 */
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 199 89% 48%;
+  --accent-foreground: 222 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 199 89% 48%;
+
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  @apply bg-physio-neutral-50 text-physio-neutral-900;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+@layer base {
+  * {
+    @apply border-physio-neutral-200;
+  }
+  body {
+    @apply bg-physio-neutral-50 text-physio-neutral-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-physio-blue-dark;
+  }
+  
+  p {
+    @apply text-physio-neutral-800;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-physio-blue to-physio-teal bg-clip-text text-transparent;
+  }
+  
+  /* Performance: Content Visibility Utility */
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px; 
+  }
+  
+  .contain-content {
+    contain: content;
+  }
+  
+  .contain-layout {
+    contain: layout;
+  }
+}
