@@ -9,7 +9,7 @@
     "build:server": "vite build --config vite.server.config.js",
     "generate:static": "node scripts/prerender.js",
     "build:sitemap": "node scripts/generate-sitemap.mjs",
-    "build": "node tools/generate-llms.js || true && vite build",
+    "build": "node tools/generate-llms.js || true && npm run build:sitemap && npm run build:client && npm run build:server && npm run generate:static",
     "preview": "vite preview --host :: --port 3000",
     "preview:static": "npx serve dist/static",
     "lint": "eslint . --quiet"
