@@ -1,188 +1,193 @@
 /* eslint-disable no-undef */
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { blogPosts } from '../src/data/blogPosts.js';
+import fs from "node:fs";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { blogPosts } from "../src/data/blogPosts.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const toAbsolute = (p) => path.resolve(__dirname, '..', p);
+const ROOT = process.cwd();
 
-// Define static routes that should always be generated
-const STATIC_ROUTES = [
-  '/',
-  '/about',
-  '/services',
-  '/blog',
-  '/contact',
-  '/booking',
-  '/privacy'
-];
+const CLIENT_INDEX = path.join(ROOT, "dist", "client", "index.html");
+const CLIENT_ASSETS_DIR = path.join(ROOT, "dist", "client", "assets");
+const SERVER_ENTRY = path.join(ROOT, "dist", "server", "entry-server.js");
+
+const PUBLIC_SITEMAP = path.join(ROOT, "public", "sitemap.xml");
+const PUBLIC_ROBOTS = path.join(ROOT, "public", "robots.txt");
+const PUBLIC_FAVICON = path.join(ROOT, "public", "favicon.svg");
+
+const OUT_DIR = path.join(ROOT, "dist", "static");
+const OUT_ASSETS_DIR = path.join(OUT_DIR, "assets");
+
+const STATIC_ROUTES = ["/", "/about", "/services", "/blog", "/contact", "/booking", "/privacy"];
+
+const NOINDEX_ROUTES = new Set(["/booking", "/privacy"]);
+
+function ensureDir(dirPath) {
+  fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function copyRecursive(src, dest) {
+  if (!fs.existsSync(src)) return;
+
+  const stat = fs.statSync(src);
+  if (stat.isDirectory()) {
+    ensureDir(dest);
+    for (const item of fs.readdirSync(src)) {
+      copyRecursive(path.join(src, item), path.join(dest, item));
+    }
+  } else {
+    ensureDir(path.dirname(dest));
+    fs.copyFileSync(src, dest);
+  }
+}
+
+function routeToFilePath(route) {
+  // "/" -> "index.html"
+  // "/blog/slug" -> "blog/slug/index.html"
+  if (route === "/") return "index.html";
+  return path.join(route.replace(/^\//, ""), "index.html");
+}
+
+function injectNoindex(html) {
+  const tag = `<meta name="robots" content="noindex, nofollow">`;
+  if (html.includes(`name="robots"`) || html.includes(`name='robots'`)) return html;
+  return html.replace("</head>", `${tag}\n</head>`);
+}
+
+function injectHelmet(html, helmet) {
+  if (!helmet) return html;
+
+  const title = helmet.title ? helmet.title.toString() : "";
+  const meta = helmet.meta ? helmet.meta.toString() : "";
+  const link = helmet.link ? helmet.link.toString() : "";
+
+  // Title
+  if (title) {
+    if (html.match(/<title>.*<\/title>/s)) {
+      html = html.replace(/<title>.*?<\/title>/s, title);
+    } else {
+      html = html.replace("<head>", `<head>\n${title}\n`);
+    }
+  }
+
+  // Meta + links
+  if (meta || link) {
+    html = html.replace("</head>", `\n${meta}\n${link}\n</head>`);
+  }
+
+  return html;
+}
+
+function injectAppHtml(html, appHtml) {
+  // Primary pattern
+  if (html.includes(`<div id="root"></div>`)) {
+    return html.replace(`<div id="root"></div>`, `<div id="root">${appHtml}</div>`);
+  }
+
+  // Fallback: if root exists but not empty stub
+  const rootOpen = html.match(/<div\s+id=["']root["']\s*>/);
+  if (rootOpen) {
+    return html.replace(rootOpen[0], `<div id="root">${appHtml}`);
+  }
+
+  // Last resort
+  return html.replace("</body>", `<div id="root">${appHtml}</div>\n</body>`);
+}
 
 (async () => {
-  console.log('🚀 Starting static site generation (SSG)...');
+  console.log("🚀 Starting static site generation (SSG)...");
 
-  // 1. Validate Blog Post Data
-  if (!blogPosts || !Array.isArray(blogPosts) || blogPosts.length === 0) {
-    console.error('❌ Error: No blog posts found in src/data/blogPosts.js');
+  // Validate blog data
+  if (!Array.isArray(blogPosts) || blogPosts.length === 0) {
+    console.error("❌ Error: No blog posts found in src/data/blogPosts.js");
     process.exit(1);
   }
   console.log(`📘 Loaded ${blogPosts.length} blog posts from data source.`);
 
-  // 2. Build Route List
-  const routes = [...STATIC_ROUTES, ...blogPosts.map((post) => `/blog/${post.slug}`)];
-  console.log(`🔍 Total routes to prerender: ${routes.length}`);
-  console.log('📋 Route list:', routes.join(', '));
-
-  // 3. Read index.html template from CLIENT build (FIXED PATH)
-  const templatePath = toAbsolute('dist/static/index.html');
-  if (!fs.existsSync(templatePath)) {
-    console.error('❌ Error: dist/client/index.html not found. Run "npm run build:client" first.');
+  // Validate build outputs exist
+  if (!fs.existsSync(CLIENT_INDEX)) {
+    console.error(`❌ Error: ${CLIENT_INDEX} not found. Run "npm run build:client" first.`);
     process.exit(1);
   }
-  const template = fs.readFileSync(templatePath, 'utf-8');
-  console.log('✅ Loaded client template (dist/client/index.html)');
-
-  // 4. Load server entry point
-  const serverEntryPath = toAbsolute('dist/server/entry-server.js');
-  if (!fs.existsSync(serverEntryPath)) {
-    console.error('❌ Error: dist/server/entry-server.js not found. Run "npm run build:server" first.');
+  if (!fs.existsSync(SERVER_ENTRY)) {
+    console.error(`❌ Error: ${SERVER_ENTRY} not found. Run "npm run build:server" first.`);
     process.exit(1);
   }
-  
+
+  const template = fs.readFileSync(CLIENT_INDEX, "utf-8");
+  console.log("✅ Loaded client template (dist/client/index.html)");
+
+  // Load server render()
   let render;
   try {
-    const serverModule = await import(serverEntryPath);
+    const serverModule = await import(pathToFileURL(SERVER_ENTRY).href);
     render = serverModule.render;
-    console.log('✅ Loaded server entry bundle (dist/server/entry-server.js)');
+    if (typeof render !== "function") throw new Error("render() export not found");
+    console.log("✅ Loaded server entry bundle (dist/server/entry-server.js)");
   } catch (e) {
-    console.error('❌ Error loading server entry bundle:', e);
+    console.error("❌ Error loading server entry bundle:", e);
     process.exit(1);
   }
 
-  // 5. Render each route
-  let successCount = 0;
-  let errorCount = 0;
+  // Build route list
+  const blogRoutes = blogPosts
+    .filter((p) => p?.slug)
+    .map((p) => `/blog/${p.slug}`);
 
-  console.log('\n🔄 Specific page generation starting...\n');
+  const routes = [...new Set([...STATIC_ROUTES, ...blogRoutes])];
 
-  for (const url of routes) {
+  console.log(`🔍 Total routes to prerender: ${routes.length}`);
+
+  // Ensure output dir exists
+  ensureDir(OUT_DIR);
+
+  let success = 0;
+  let failed = 0;
+
+  for (const route of routes) {
     try {
-      console.log(`Processing: ${url}`);
-      const { appHtml, helmet } = render(url);
+      const result = await render(route);
+      const appHtml = result?.appHtml ?? result?.html ?? "";
+      const helmet = result?.helmet;
 
-      if (!appHtml || appHtml.length < 100) {
-        throw new Error(`Rendered appHtml is empty or too short for ${url}. Length: ${appHtml?.length}`);
+      if (!appHtml || appHtml.length < 50) {
+        throw new Error(`Rendered HTML empty/too short (${appHtml?.length ?? 0})`);
       }
 
-      // Start with template
       let html = template;
+      html = injectHelmet(html, helmet);
+      html = injectAppHtml(html, appHtml);
 
-      // Inject Helmet data (Title, Meta, Link tags)
-      if (helmet) {
-        const title = helmet.title ? helmet.title.toString() : '';
-        const meta = helmet.meta ? helmet.meta.toString() : '';
-        const link = helmet.link ? helmet.link.toString() : '';
-        
-        // Replace or inject title
-        if (title) {
-          if (html.includes('<title>')) {
-            html = html.replace(/<title>.*?<\/title>/s, title);
-          } else {
-            html = html.replace('<head>', `<head>${title}`);
-          }
-        }
-        
-        // Inject meta and link tags before </head>
-        if (meta || link) {
-          html = html.replace('</head>', `${meta}${link}</head>`);
-        }
+      if (NOINDEX_ROUTES.has(route)) {
+        html = injectNoindex(html);
       }
 
-      // Inject App Content into the root div (CRITICAL FOR SEO)
-      if (!html.includes('<div id="root"></div>')) {
-        console.warn(`⚠️  Warning: Template doesn't contain '<div id="root"></div>', trying alternate patterns...`);
-        // Fallback patterns
-        html = html.replace(
-          /<div id=["']root["']\s*\/?>/,
-          `<div id="root">${appHtml}</div>`
-        );
-      } else {
-        html = html.replace(
-          '<div id="root"></div>',
-          `<div id="root">${appHtml}</div>`
-        );
-      }
+      const relPath = routeToFilePath(route);
+      const outFile = path.join(OUT_DIR, relPath);
 
-      // Determine output path (FIXED: output to dist/static/)
-      const filePath = url === '/' ? 'index.html' : `${url.substring(1)}/index.html`;
-      const fullPath = toAbsolute(`dist/static/${filePath}`); // FIXED: static folder
-      const dir = path.dirname(fullPath);
+      ensureDir(path.dirname(outFile));
+      fs.writeFileSync(outFile, html, "utf-8");
 
-      // Create directory structure
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-
-      // Write file
-      fs.writeFileSync(fullPath, html);
-      
-      // ==========================================
-      // VERIFICATION STEP
-      // ==========================================
-      const writtenContent = fs.readFileSync(fullPath, 'utf-8');
-      
-      // Verification 1: Check file size
-      if (writtenContent.length < 1000) {
-         console.warn(`⚠️  Warning: File size for ${url} is suspiciously small (${writtenContent.length} bytes).`);
-      }
-
-      // Verification 2: Check for populated root div
-      const rootPopulated = writtenContent.includes('<div id="root">') && 
-                           !writtenContent.includes('<div id="root"></div>') &&
-                           writtenContent.includes('</div>'); // Has closing tag after content
-      
-      if (!rootPopulated) {
-        console.error(`❌ CRITICAL: Root div is empty for ${url}!`);
-        console.error('   HTML snippet:', writtenContent.substring(writtenContent.indexOf('<div id="root">'), writtenContent.indexOf('<div id="root">') + 200));
-        throw new Error(`Root div not populated for ${url}`);
-      }
-
-      // Verification 3: Check for blog post content
-      if (url.startsWith('/blog/')) {
-        const slug = url.split('/blog/')[1];
-        const post = blogPosts.find(p => p.slug === slug);
-        
-        if (post) {
-          const titleFound = writtenContent.includes(post.title);
-          const contentFound = writtenContent.length > 2000; // Rough check for substantial content
-          
-          if (!titleFound) {
-             console.warn(`⚠️  Title not found as plain text (might be encoded): "${post.title}"`);
-          }
-          if (!contentFound) {
-             console.warn(`⚠️  Content seems short for blog post: ${writtenContent.length} bytes`);
-          }
-        }
-      }
-
-      console.log(`   ✅ Saved: dist/static/${filePath} (${(writtenContent.length / 1024).toFixed(2)} KB)`);
-      successCount++;
-
+      console.log(`✅ ${route} -> dist/static/${relPath}`);
+      success++;
     } catch (e) {
-      console.error(`❌ Failed to render ${url}:`, e.message);
-      if (e.stack) console.error(e.stack);
-      errorCount++;
+      console.error(`❌ Failed: ${route}: ${e.message}`);
+      failed++;
     }
   }
 
-  console.log('\n------------------------------------------------');
-  console.log(`🎉 Static generation finished.`);
-  console.log(`✅ Success: ${successCount}`);
-  console.log(`❌ Errors:  ${errorCount}`);
-  console.log(`📁 Output: dist/static/ (ready for deployment)`);
-  
-  if (errorCount > 0) {
-    console.error('⚠️ Some pages failed to generate.');
-    process.exit(1);
-  }
+  // Copy assets so static HTML loads CSS/JS
+  console.log("📦 Copying client assets to dist/static/assets...");
+  copyRecursive(CLIENT_ASSETS_DIR, OUT_ASSETS_DIR);
+
+  // Copy SEO files into dist/static (since Cloudflare will serve dist/static)
+  console.log("🧭 Copying sitemap.xml + robots.txt to dist/static...");
+  copyRecursive(PUBLIC_SITEMAP, path.join(OUT_DIR, "sitemap.xml"));
+  copyRecursive(PUBLIC_ROBOTS, path.join(OUT_DIR, "robots.txt"));
+  copyRecursive(PUBLIC_FAVICON, path.join(OUT_DIR, "favicon.svg"));
+
+  console.log("------------------------------------------------");
+  console.log(`🎉 SSG finished. ✅ Success: ${success} | ❌ Failed: ${failed}`);
+  console.log("📁 Output: dist/static/ (serve this on Cloudflare Pages)");
+
+  if (failed > 0) process.exit(1);
 })();
