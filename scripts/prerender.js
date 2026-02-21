@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -17,7 +16,15 @@ const PUBLIC_FAVICON = path.join(ROOT, "public", "favicon.svg");
 const OUT_DIR = path.join(ROOT, "dist", "static");
 const OUT_ASSETS_DIR = path.join(OUT_DIR, "assets");
 
-const STATIC_ROUTES = ["/", "/about", "/services", "/blog", "/contact", "/booking", "/privacy"];
+const STATIC_ROUTES = [
+  "/",
+  "/about",
+  "/services",
+  "/blog",
+  "/contact",
+  "/booking",
+  "/privacy",
+];
 
 const NOINDEX_ROUTES = new Set(["/booking", "/privacy"]);
 
@@ -49,7 +56,8 @@ function routeToFilePath(route) {
 
 function injectNoindex(html) {
   const tag = `<meta name="robots" content="noindex, nofollow">`;
-  if (html.includes(`name="robots"`) || html.includes(`name='robots'`)) return html;
+  if (html.includes(`name="robots"`) || html.includes(`name='robots'`))
+    return html;
   return html.replace("</head>", `${tag}\n</head>`);
 }
 
@@ -59,6 +67,7 @@ function injectHelmet(html, helmet) {
   const title = helmet.title ? helmet.title.toString() : "";
   const meta = helmet.meta ? helmet.meta.toString() : "";
   const link = helmet.link ? helmet.link.toString() : "";
+  const script = helmet.script ? helmet.script.toString() : ""; // ✅ ADD (JSON-LD, etc.)
 
   // Title
   if (title) {
@@ -69,9 +78,9 @@ function injectHelmet(html, helmet) {
     }
   }
 
-  // Meta + links
-  if (meta || link) {
-    html = html.replace("</head>", `\n${meta}\n${link}\n</head>`);
+  // Meta + links + scripts
+  if (meta || link || script) {
+    html = html.replace("</head>", `\n${meta}\n${link}\n${script}\n</head>`);
   }
 
   return html;
@@ -80,7 +89,10 @@ function injectHelmet(html, helmet) {
 function injectAppHtml(html, appHtml) {
   // Primary pattern
   if (html.includes(`<div id="root"></div>`)) {
-    return html.replace(`<div id="root"></div>`, `<div id="root">${appHtml}</div>`);
+    return html.replace(
+      `<div id="root"></div>`,
+      `<div id="root">${appHtml}</div>`
+    );
   }
 
   // Fallback: if root exists but not empty stub
@@ -105,11 +117,15 @@ function injectAppHtml(html, appHtml) {
 
   // Validate build outputs exist
   if (!fs.existsSync(CLIENT_INDEX)) {
-    console.error(`❌ Error: ${CLIENT_INDEX} not found. Run "npm run build:client" first.`);
+    console.error(
+      `❌ Error: ${CLIENT_INDEX} not found. Run "npm run build:client" first.`
+    );
     process.exit(1);
   }
   if (!fs.existsSync(SERVER_ENTRY)) {
-    console.error(`❌ Error: ${SERVER_ENTRY} not found. Run "npm run build:server" first.`);
+    console.error(
+      `❌ Error: ${SERVER_ENTRY} not found. Run "npm run build:server" first.`
+    );
     process.exit(1);
   }
 
