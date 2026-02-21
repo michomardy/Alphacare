@@ -20,6 +20,54 @@
     <!-- Sitemap Reference - Located at /sitemap.xml -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "@id": "https://alphacarephysio.com.au/#medicalbusiness",
+        "name": "AlphaCare Physiotherapy",
+        "url": "https://alphacarephysio.com.au",
+        "telephone": "1300 433 233",
+        "priceRange": "$$",
+        "image": "https://alphacarephysio.com.au/og.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "855 Marion Road",
+          "addressLocality": "Mitchell Park",
+          "addressRegion": "SA",
+          "postalCode": "5043",
+          "addressCountry": "AU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -35.0167,
+          "longitude": 138.5667
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Adelaide" },
+          { "@type": "Place", "name": "Marion" },
+          { "@type": "Place", "name": "Mitchell Park" }
+        ],
+        "medicalSpecialty": ["Physiotherapy", "Rehabilitation"]
+      }
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
