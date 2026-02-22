@@ -2714,7 +2714,7 @@ and built to last.
     id: 10,
     slug: 'frozen-shoulder-rehab-physiotherapy',
     title: 'Frozen Shoulder',
-    excerpt: 'understanding Frozen shoulder.',
+    excerpt: 'Stages, symptoms, recovery timeline, and how physiotherapy restores movement and reduces long-term stiffness.',
     author: 'Michael Ghattas',
     date: 'December 9, 2025',
     readTime: '7 min read',
