@@ -6,10 +6,10 @@ export const blogPosts = [
     excerpt:
       'Not all back pain is the same. Learn the difference between mechanical and non-mechanical back pain, how to recognise red flags, when imaging is needed, and when physiotherapy is the right approach.',
     author: 'Michael Ghattas',
-    date: 'December 10, 2025',
+    date: 'Jan 10, 2026',
     readTime: '10 min read',
     metaDescription:
-      'Learn the difference between mechanical and non-mechanical back pain, key symptoms, red flags, when imaging is needed, and how physiotherapy helps recovery.',
+      'Mechanical or non-mechanical back pain? Learn how to tell the difference, spot red flags, avoid unnecessary scans, and know when physiotherapy helps.',
     keywords:
       'mechanical back pain, non-mechanical back pain, back pain causes, back pain red flags, physiotherapy back pain, spinal pain assessment, back pain Marion',
     image:
@@ -376,7 +376,7 @@ or worry.
   `
   },
 
-  
+
   {
     id: 2,
     slug: 'sports-injury-physiotherapy-recovery',
@@ -387,7 +387,7 @@ or worry.
     date: 'February 14, 2026',
     readTime: '10 min read',
     metaDescription:
-      'A detailed, evidence-based guide to sports injury physiotherapy. Learn how injuries heal, why re-injury happens, and how physiotherapy ensures a safe return to sport.',
+      'Recover from sports injuries the right way. Learn how physiotherapy rebuilds strength, manages load, and gets you back to sport with lower re-injury risk.',
     keywords:
       'sports injury physiotherapy, sports injury recovery, return to sport physiotherapy, injury prevention physiotherapy, sports physio Marion, athletic rehab',
     image:
@@ -722,7 +722,7 @@ physiotherapy assessment can make the difference.
     date: 'February 14, 2026',
     readTime: '9 min read',
     metaDescription:
-      'Poor posture isn’t the villain it’s made out to be. Learn the truth about posture, pain, and how physiotherapy improves strength, movement tolerance, and comfort.',
+      'Is poor posture really causing your pain? Bust common posture myths and learn what actually reduces neck, back, and desk-related pain.',
     keywords:
       'posture problems, bad posture pain myth, posture correction physiotherapy, desk posture pain, neck pain posture, back pain posture',
     image:
@@ -1041,7 +1041,7 @@ and tolerate daily positions with confidence.
     date: 'February 14, 2026',
     readTime: '9 min read',
     metaDescription:
-      'When should you see a physiotherapist? Learn which pains are safe to manage, which need physio early, and when medical review is essential.',
+      'Not sure if you need a physio, rest, or a GP? Learn when physiotherapy helps, when to wait, and when medical review is essential.',
     keywords:
       'when to see a physiotherapist, do I need physio, physiotherapy assessment, pain management physio, sports injury physio, physio Marion',
     image:
@@ -1355,7 +1355,7 @@ a physiotherapy assessment can provide clarity and confidence.
     date: 'February 14, 2026',
     readTime: '9 min read',
     metaDescription:
-      'A deep, evidence-aligned guide to desk and work-related injuries: neck and back pain, RSI, headaches, and stiffness. Learn why desk pain happens and how physiotherapy fixes it long-term.',
+      'Desk pain isn’t just posture. Learn why neck, back, headaches, and RSI develop at work — and how physiotherapy fixes the real cause.',
     keywords:
       'desk pain, office neck pain, office back pain, RSI physiotherapy, workplace ergonomics, work related injuries, physiotherapy Marion, desk posture pain, headaches from desk work',
     image:
@@ -1697,9 +1697,9 @@ without constant self-monitoring or anxiety.
     title: 'Management of Achilles Tendinopathy',
     excerpt: 'Struggling with heel pain? Learn about the causes, symptoms, and staged physiotherapy management of Achilles Tendinopathy at our Marion clinic.',
     author: 'Michael Ghattas',
-    date: 'December 14, 2025',
+    date: 'Jan 14, 2026',
     readTime: '6 min read',
-    metaDescription: 'Expert Achilles tendinopathy management in Marion, SA. Learn about staged loading programs, progressive strengthening, and pain relief strategies for heel pain near Brighton.',
+    metaDescription: 'Achilles tendinopathy explained. Learn why heel pain persists, how staged loading works, and how physiotherapy restores tendon strength safely.',
     keywords: 'Achilles tendinopathy, heel pain treatment, Physiotherapist in Marion, tendon rehabilitation, calf pain',
     image: 'https://horizons-cdn.hostinger.com/7582bfac-3acf-4347-93c9-6084476e4580/c0a8f85688340cf1a9c116ac2b487d58.webp',
     imageAlt: 'Close up of runner tying shoes, focusing on ankle and heel area',
@@ -2057,7 +2057,7 @@ not outdated rest-based models.
 
     `
   },
-  
+
 
   {
     id: 7,
@@ -2069,7 +2069,7 @@ not outdated rest-based models.
     date: 'February 14, 2026',
     readTime: '8 min read',
     metaDescription:
-      'A clear, patient-focused explanation of evidence-based physiotherapy. Learn how modern physio uses research, experience, and your goals to improve outcomes and avoid ineffective care.',
+      'What does evidence-based physiotherapy really mean? Learn how research, clinical expertise, and your goals combine for better recovery outcomes.',
     keywords:
       'evidence based physiotherapy, modern physiotherapy, best physio Marion, physiotherapy research, active rehabilitation, sports physio Marion',
     image:
@@ -2386,10 +2386,10 @@ and built to last.
     excerpt:
       'Motion is lotion! Explore safe strengthening and mobility exercises to manage knee osteoarthritis pain and improve function with our Marion physio team.',
     author: 'Michael Ghattas',
-    date: 'December 12, 2025',
+    date: 'Jan 12, 2026',
     readTime: '5 min read',
     metaDescription:
-      'Manage knee osteoarthritis effectively with physiotherapy in Marion. Discover safe exercises for knee pain relief, strengthening, and improved mobility near Warradale.',
+      'Best exercises for knee osteoarthritis. Learn how physiotherapy-guided strengthening reduces pain, improves movement, and protects your joints.',
     keywords:
       'Knee osteoarthritis exercises, knee pain relief, Physiotherapist in Marion, arthritis management, joint health',
     image:
@@ -2397,7 +2397,7 @@ and built to last.
     imageAlt:
       'An older man standing, shown from mid-thigh to feet, with both knees highlighted to illustrate osteoarthritis, including visible joint inflammation and wear.',
     relatedServiceId: "recovery",
-   
+
     content: `
 <h2>What Are the Best Exercises for Knee Osteoarthritis?</h2>
 
@@ -2569,15 +2569,15 @@ and built to last.
     title: 'Strength Training for Runners',
     excerpt: 'Running isn\'t enough to build a resilient body. Learn which key muscle groups runners in Marion need to strengthen to prevent injury and run faster.',
     author: 'Michael Ghattas',
-    date: 'December 11, 2025',
+    date: 'Feb 11, 2026',
     readTime: '8 min read',
-    metaDescription: 'Boost your running performance and prevent injuries with strength training. Expert advice from Physiotherapists in Marion for runners in Brighton and Oaklands Park.',
+    metaDescription: 'Running alone isn’t enough. Learn how strength training helps runners prevent injuries, improve efficiency, and stay pain-free long-term.',
     keywords: 'Running injuries, strength training for runners, sports physio Marion, injury prevention, marathon training',
     image: 'https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&q=80&w=800',
     imageAlt: 'athelete doing rope core Athlete using battle ropes for strength training to improve running performance and injury preventionstrengthening',
     relatedServiceId: "sports-injury",
-   
- content: `
+
+    content: `
       <h2>Strength Training for Runners: Improve Performance and Reduce Injury Risk</h2>
 
 <p><strong>Strength training for runners</strong> is no longer optional — it’s a key part of improving performance, efficiency, and long-term injury prevention. Whether you’re a recreational runner or training for races, adding the right strength work can help you run faster, feel stronger, and stay pain-free.</p>
@@ -2716,9 +2716,9 @@ and built to last.
     title: 'Frozen Shoulder',
     excerpt: 'Stages, symptoms, recovery timeline, and how physiotherapy restores movement and reduces long-term stiffness.',
     author: 'Michael Ghattas',
-    date: 'December 9, 2025',
+    date: 'Feb 9, 2026',
     readTime: '7 min read',
-    metaDescription: 'Comprehensive guide to post-operative arm rehabilitation in Marion. Physiotherapy for shoulder and elbow surgery recovery, serving patients from Warradale and Oaklands Park.',
+    metaDescription: 'Frozen shoulder explained. Learn the stages, symptoms, recovery timeline, and how physiotherapy restores movement and reduces long-term stiffness.',
     keywords: 'Frozen shoulder, shoulder recovery, shoulder physio in marion',
     image: 'https://horizons-cdn.hostinger.com/7582bfac-3acf-4347-93c9-6084476e4580/d9b071e80a08e08ddd87139123e6346c.jpg',
     imageAlt: 'physiotherapist doing shoulder exercise for a ptient',
@@ -2860,9 +2860,9 @@ and built to last.
     title: 'Muscle Tears Explained',
     excerpt: 'From hamstring strains to calf tears, understand the grading of muscle injuries and the safe timeline for return-to-activity with our Marion physios.',
     author: 'Michael Ghattas',
-    date: 'December 7, 2025',
+    date: 'Feb 7, 2026',
     readTime: '5 min read',
-    metaDescription: 'Expert treatment for muscle tears and strains in Marion, SA. Learn about injury grading, healing timelines, and rehabilitation for hamstrings and calves near Brighton.',
+    metaDescription: 'Muscle tears explained—grades, healing stages, and return-to-sport timelines. Learn what to do in the first week and how physio reduces re-injury risk.',
     keywords: 'Muscle tear treatment, hamstring strain, calf tear, physiotherapy recovery, sports injury Marion, soft tissue injury',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769134187/muscle_tear_wx6t9i.png',
     imageAlt: 'Physiotherapist assessing a calf muscle injury',
@@ -3005,9 +3005,9 @@ and built to last.
     title: 'Total Knee Replacement Rehab',
     excerpt: 'Preparing for or recovering from a knee replacement? Learn how pre-hab and post-op physiotherapy in Marion are essential for regaining mobility and independence.',
     author: 'Michael Ghattas',
-    date: 'December 4, 2025',
+    date: 'Jan 4, 2026',
     readTime: '6 min read',
-    metaDescription: 'Maximize your Total Knee Replacement recovery with physiotherapy in Marion. Pre-op preparation and post-op rehabilitation for optimal strength and mobility near Oaklands Park.',
+    metaDescription: 'Total knee replacement rehab guide—what to expect week-by-week, key exercises, swelling control, and milestones. Learn how physio improves strength and walking.',
     keywords: 'Total knee replacement recovery, TKR physio Marion, knee surgery rehabilitation, post-op knee exercises, joint replacement',
     image: 'https://horizons-cdn.hostinger.com/7582bfac-3acf-4347-93c9-6084476e4580/6d23d3c18e151bc53a167520e98b6618.jpg',
     imageAlt: 'Senior patient walking with crutches during rehabilitation',
@@ -3103,7 +3103,7 @@ and built to last.
     author: 'Michael Ghattas',
     date: 'January 4, 2026',
     readTime: '4 min read',
-    metaDescription: 'Expert Physiotherapy near Mitchell Park. AlphaCare Physio provides trusted local care for back pain, sports injuries, and rehabilitation. Book your assessment today.',
+    metaDescription: 'Trusted physiotherapy near Mitchell Park for back pain, sports injuries, and rehab. Evidence-based care, clear plans, and one-on-one treatment—book today.',
     keywords: 'Physiotherapist Mitchell Park, local physio, back pain treatment, AlphaCare Physio, rehabilitation Mitchell Park',
     image: 'https://horizons-cdn.hostinger.com/7582bfac-3acf-4347-93c9-6084476e4580/db6b2bd1cb039d6ce0fec11a496b1772.jpg',
     imageAlt: 'Playground in Mitchell Park symbolizing local community activity',
@@ -3144,7 +3144,7 @@ and built to last.
     author: 'Michael Ghattas',
     date: 'January 4, 2026',
     readTime: '5 min read',
-    metaDescription: 'Professional Physiotherapist in Marion SA. AlphaCare Physio offers manual therapy, sports rehabilitation, and personalized care for the Marion community. Book online.',
+    metaDescription: 'Looking for a physiotherapist in Marion? Get personalised treatment for pain, injuries, and recovery with evidence-based rehab and hands-on care—book online.',
     keywords: 'Physiotherapist Marion SA, AlphaCare Physio, musculoskeletal health, sports rehab Marion, local physiotherapy',
     image: 'https://horizons-cdn.hostinger.com/7582bfac-3acf-4347-93c9-6084476e4580/957e3ba26a378ab6e9e86c4d1b9a6a64.jpg',
     imageAlt: 'AlphaCare Hub storefront photo',
@@ -3348,7 +3348,7 @@ if you have any questions before booking.
     author: 'AlphaCare Physiotherapy',
     date: 'January 19, 2026',
     readTime: '8 min read',
-    metaDescription: 'Expert hamstring muscle tear treatment and physiotherapy in Marion. Learn about symptoms, recovery timelines, and rehabilitation exercises to get back to sport safely.',
+    metaDescription: 'Hamstring tear — grade 1, 2, or 3? Learn symptom differences, recovery timelines, and rehab exercises that safely return you to sport in Marion.',
     keywords: 'hamstring tear, muscle strain, sports physiotherapy Marion, hamstring rehab, leg injury treatment, AlphaCare Physiotherapy',
     image: 'https://images.unsplash.com/photo-1520630272715-4a31c6a3c15b',
     imageAlt: 'Male athlete performing hamstring stretch and lunge exercise for injury recovery and physiotherapy',
@@ -3458,12 +3458,12 @@ if you have any questions before booking.
     author: 'AlphaCare Physiotherapy',
     date: 'January 20, 2026',
     readTime: '7 min read',
-    metaDescription: 'Expert vestibular rehabilitation in Marion, Mitchell Park, and Ascot Park. Improve balance, reduce dizziness, and treat vertigo with specialized physical therapy programs.',
+    metaDescription: 'Vestibular rehab for dizziness and vertigo—BPPV, balance problems, and unsteadiness. Learn how assessment and targeted exercises reduce symptoms and falls risk.',
     keywords: 'vestibular rehabilitation, balance problems, dizziness treatment, vertigo relief, physical therapy Marion, BPPV treatment',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769053096/dizzy_woman_m1tbj1.jpg',
     imageAlt: 'Physical therapist assisting patient with balance and vestibular rehabilitation exercises',
     relatedServiceId: "headache-dizziness",
-    
+
     content: `
       <h2>Vestibular Rehabilitation: Your Path to Better Balance and Less Dizziness</h2>
       <p>If you experience dizziness, vertigo, or balance problems, simple daily tasks can become challenging and even dangerous. At AlphaCare Physiotherapy in Marion, we offer specialized Vestibular Rehabilitation Therapy (VRT) to help you regain your equilibrium and improve your quality of life.</p>
@@ -3532,7 +3532,7 @@ if you have any questions before booking.
     author: 'AlphaCare Physiotherapy',
     date: 'January 20, 2026',
     readTime: '6 min read',
-    metaDescription: 'Discover natural, long-lasting pain relief with physical therapy in Marion. Avoid medication side effects and address the root cause of your pain with our expert physiotherapists.',
+    metaDescription: 'Natural pain relief that lasts—learn how physiotherapy reduces pain without relying on medications by improving movement, strength, and load tolerance.',
     keywords: 'natural pain relief, physical therapy pain management, chronic pain solutions, non-medication pain relief, Marion physiotherapy, lasting pain relief',
     image: 'https://images.unsplash.com/photo-1620051844584-15ac31d5fccd',
     imageAlt: 'Patient receiving hands-on physical therapy treatment for pain relief and rehabilitation',
@@ -3614,7 +3614,7 @@ if you have any questions before booking.
     author: 'AlphaCare Physiotherapy',
     date: 'January 20, 2026',
     readTime: '6 min read',
-    metaDescription: 'Recover from injuries and surgery with personalized physical therapy in Marion. Our expert team helps you return to normal activities and a pain-free life faster and stronger.',
+    metaDescription: 'Injury and surgery recovery made clear—learn how physiotherapy guides safe progression, restores strength and mobility, and helps you return to normal life faster.',
     keywords: 'injury recovery, post-surgery rehabilitation, physical therapy Marion, pain-free life, active lifestyle, AlphaCare Physiotherapy',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769052027/ergetic_person_bouncing_up_with_an_incredibly_hap-0_mvarxd.jpg',
     imageAlt: 'Physical therapist working with patient on recovery and rehabilitation exercises',
@@ -3691,7 +3691,7 @@ if you have any questions before booking.
     date: 'January 21, 2026',
     readTime: '11 min read',
     metaDescription:
-      'Stretching vs strengthening explained by physiotherapists. Learn what actually helps pain, stiffness, injury recovery, and long-term results — and when stretching alone falls short.',
+      'Stretching vs strengthening—what actually works for pain and stiffness? Learn when stretching helps, when strength matters more, and how physio combines both.',
     keywords:
       'stretching vs strengthening, does stretching help pain, strengthening for pain relief, physiotherapy exercises, injury rehab exercises, physio Marion, physio Mitchell Park',
     image:
@@ -3904,7 +3904,7 @@ if you have any questions before booking.
       it’s about applying both at the right time, for the right reason.
     </p>
   `
-  
+
   },
   {
     id: 20,
@@ -3914,7 +3914,7 @@ if you have any questions before booking.
     author: 'AlphaCare Physio',
     date: 'January 22, 2026',
     readTime: '8 min read',
-    metaDescription: 'Shin splints vs stress fractures: Learn the differences, warning signs, and when to see a physiotherapist. Expert guide for runners in Adelaide.',
+    metaDescription: 'Shin pain when running? Learn how to tell shin splints from a stress fracture, spot the warning signs, and when to stop and see a physio in Adelaide.',
     keywords: 'shin splints, stress fracture, runners, Adelaide, running injury, physiotherapy, MTSS, tibial stress fracture, running pain',
     image: 'https://images.unsplash.com/photo-1613936360976-8f35cf0e5461',
     imageAlt: 'Runner experiencing shin pain during training',
@@ -4084,7 +4084,7 @@ if you have any questions before booking.
     author: 'AlphaCare Physio',
     date: 'January 22, 2026',
     readTime: '8 min read',
-    metaDescription: 'Expert guide to treating growing pains in children. Learn about causes, when to seek help, and how physiotherapy can help. AlphaCare Physio Adelaide.',
+    metaDescription: 'Growing pains in kids: what’s normal, what’s not, red flags to watch for, and practical physio strategies to reduce night leg pain in Adelaide families.',
     keywords: 'growing pains, children, kids, physiotherapy, Adelaide, parents, leg pain, pediatric physio, Mitchell Park',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769052292/child_joint_pain_bnlwel.jpg',
     imageAlt: 'Pediatric physiotherapist performing gentle leg treatment on child',
@@ -4193,7 +4193,7 @@ if you have any questions before booking.
     date: 'January 22, 2026',
     readTime: '8 min read',
     category: 'TMJ & Jaw Health',
-    metaDescription: 'Expert guide to TMJ dysfunction treatment by physiotherapists. Learn about jaw pain, clicking, headaches, and evidence-based physiotherapy solutions in Marion.',
+    metaDescription: 'Jaw pain, clicking, or locking? TMJ dysfunction is treatable. Learn how physio in Marion relieves jaw pain, headaches, and restricted mouth opening.',
     keywords: 'TMJ dysfunction, jaw pain, temporomandibular joint, physiotherapy, headaches, clicking jaw, Adelaide, jaw treatment',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769052478/physio-_treating-_TMJ_usfinl.jpg',
     imageAlt: 'Physiotherapist performing TMJ assessment and treatment',
@@ -4307,7 +4307,7 @@ if you have any questions before booking.
     author: 'Michael Ghattas',
     date: 'Jan 23, 2026',
     readTime: '9 min read',
-    metaDescription: 'Fibromyalgia physiotherapy in Marion and Mitchell Park. Learn symptoms, causes, diagnosis, and how physiotherapy helps manage chronic pain, fatigue, and stiffness.',
+    metaDescription: 'Fibromyalgia explained: symptoms, diagnosis, and evidence-based management. Learn how physio helps with pacing, strength, sleep, and flare-ups in Marion.',
     keywords: 'fibromyalgia treatment Marion, physiotherapy Mitchell Park, chronic pain physiotherapist Marion, widespread pain syndrome, fibromyalgia physio Adelaide',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769135503/ChatGPT_Image_Jan_23_2026_01_00_14_PM_dhahpn.webp',
     imageAlt: 'Physiotherapist discussing fibromyalgia symptoms and pain management with a patient in a clinic',
@@ -4424,7 +4424,7 @@ if you have any questions before booking.
 `
   },
 
-  
+
   {
     id: 24,
     slug: "trigger-finger-physiotherapy-treatment",
@@ -4432,10 +4432,10 @@ if you have any questions before booking.
     excerpt:
       "Trigger finger causes clicking, locking, and pain in the fingers or thumb. Learn why it happens and how physiotherapy can help restore smooth hand movement and function.",
     author: "Michael Ghattas",
-    date: "Jan 10, 2025",
+    date: "Jan 10, 2026",
     readTime: "5 min read",
     metaDescription:
-      "Trigger finger (stenosing tenosynovitis) causes finger locking and pain. Learn the causes, symptoms, and evidence-based physiotherapy treatment options.",
+      "Finger locking or catching when you bend it? Trigger finger is treatable. Learn causes, stages, and physio or injection options at AlphaCare Marion.",
     keywords:
       "trigger finger, stenosing tenosynovitis, finger locking, hand pain, trigger finger treatment, physiotherapy for trigger finger, thumb trigger finger",
     image:
@@ -4554,16 +4554,16 @@ if you have any questions before booking.
     excerpt:
       "Whiplash is a common neck injury often caused by car accidents or sudden movement. Learn the symptoms, recovery process, and how physiotherapy can help restore movement and reduce pain.",
     author: "Michael Ghattas",
-    date: "Jan 15, 2025",
+    date: "Jan 15, 2026",
     readTime: "6 min read",
     metaDescription:
-      "Whiplash injury can cause neck pain, headaches, and stiffness. Learn the causes, symptoms, and evidence-based physiotherapy treatment options at AlphaCare Physiotherapy.",
+      "Whiplash after an accident? Neck pain and headaches can linger without treatment. Learn the evidence-based physio approach to whiplash recovery in Marion.",
     keywords:
       "whiplash injury, whiplash physiotherapy, neck pain after car accident, whiplash treatment, cervical spine injury, physiotherapy Marion",
     image: "https://res.cloudinary.com/diiacrthz/image/upload/v1769141151/neck_pain_stiffness_yvwrop.webp",
     imageAlt:
       "Person holding their neck after whiplash injury with neck pain and stiffness",
-      relatedServiceId: "neck-back",
+    relatedServiceId: "neck-back",
     content: `
 <h2>Whiplash Injury: Symptoms, Recovery, and Evidence-Based Treatment</h2>
 
@@ -4692,7 +4692,7 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     date: 'Jan 23, 2026',
     readTime: '5 min read',
 
-    metaDescription: 'Learn 7 simple ways to feel better and support your immune system. AlphaCare Physio shares evidence-based tips on exercise, sleep, diet, gut health, and lifestyle habits.',
+    metaDescription: '7 evidence-based ways to feel better: exercise, sleep, gut health, and more. Practical physio-backed strategies to boost your energy and immunity.',
     keywords: 'immune system support, physiotherapy health tips, exercise and immunity, sleep and immune health, gut health, AlphaCare Physio, physiotherapy Marion SA',
 
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769147271/happy_girl_running_dgu7ua.webp',
@@ -4824,7 +4824,7 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     date: 'January 23, 2026',
     readTime: '10 min read',
     metaDescription:
-      'Neck pain physiotherapy guide for Marion & Mitchell Park. Learn mechanical vs neural neck pain, cervicogenic headaches, trapped nerve symptoms, red flags, and how physiotherapy helps recovery.',
+      'Neck pain or headaches? Learn the difference between mechanical and neural neck pain, spot red flags, and find lasting relief with physio in Marion.',
     keywords:
       'neck pain, neck pain physiotherapy, physiotherapist Marion, physiotherapy Mitchell Park, pinched nerve neck, cervical radiculopathy, cervicogenic headache, neck stiffness, AlphaCare Physio',
     image:
@@ -5044,27 +5044,27 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     </p>
   `
   }
-,
-{
-  id: 28,
-  slug: 'shoulder-impingement-subacromial-pain-syndrome-physiotherapy',
-  title:
-    'Shoulder Impingement',
-  excerpt:
-    'Shoulder impingement (subacromial pain syndrome) is a common cause of shoulder pain—especially with overhead activity. Learn what it is, why it happens, symptoms to watch for, and how physiotherapy helps you recover without surgery in Marion and Mitchell Park.',
-  author: 'Michael Ghattas',
-  date: 'January 23, 2026',
-  readTime: '9 min read',
-  metaDescription:
-    'Subacromial pain syndrome (shoulder impingement) explained. Causes, symptoms, diagnosis, scans, recovery time, and evidence-based physiotherapy rehab in Marion & Mitchell Park at AlphaCare Physio.',
-  keywords:
-    'shoulder impingement, subacromial pain syndrome, SAPS, shoulder pain physio, rotator cuff tendinopathy, painful arc, Hawkins Kennedy test, scapular strengthening, physiotherapist Marion, physiotherapy Mitchell Park, AlphaCare Physio',
-  image:
-    'https://res.cloudinary.com/diiacrthz/image/upload/v1769148892/shoulder_pain_qqspnq.webp',
-  imageAlt:
-    'Person holding the outer shoulder area with discomfort, representing subacromial pain syndrome',
-  relatedServiceId: "sports-injury",
-  content: `
+  ,
+  {
+    id: 28,
+    slug: 'shoulder-impingement-subacromial-pain-syndrome-physiotherapy',
+    title:
+      'Shoulder Impingement',
+    excerpt:
+      'Shoulder impingement (subacromial pain syndrome) is a common cause of shoulder pain—especially with overhead activity. Learn what it is, why it happens, symptoms to watch for, and how physiotherapy helps you recover without surgery in Marion and Mitchell Park.',
+    author: 'Michael Ghattas',
+    date: 'January 23, 2026',
+    readTime: '9 min read',
+    metaDescription:
+      'Shoulder pain lifting or reaching overhead? Subacromial pain syndrome explained: causes, what scans show, and the physio rehab that restores function in Marion.',
+    keywords:
+      'shoulder impingement, subacromial pain syndrome, SAPS, shoulder pain physio, rotator cuff tendinopathy, painful arc, Hawkins Kennedy test, scapular strengthening, physiotherapist Marion, physiotherapy Mitchell Park, AlphaCare Physio',
+    image:
+      'https://res.cloudinary.com/diiacrthz/image/upload/v1769148892/shoulder_pain_qqspnq.webp',
+    imageAlt:
+      'Person holding the outer shoulder area with discomfort, representing subacromial pain syndrome',
+    relatedServiceId: "sports-injury",
+    content: `
     <h2>Shoulder Impingement Explained: What Subacromial Pain Syndrome Really Is — and How Physiotherapy Helps</h2>
 
     <p><strong>Shoulder impingement</strong> — now more accurately referred to as <strong>subacromial pain syndrome (SAPS)</strong> — is one of the most common causes of shoulder pain we see at <strong>AlphaCare Physio</strong>. The good news? For most people, it is very treatable with the right rehabilitation plan, <strong>without surgery</strong>.</p>
@@ -5073,7 +5073,12 @@ emphasise exercise, reassurance, and graded return to activity.</p>
 
     <h2>What Is Shoulder Impingement (Subacromial Pain Syndrome)?</h2>
     <p><strong>Subacromial pain syndrome</strong> refers to pain caused by irritation of the <strong>rotator cuff tendons</strong> and/or the <strong>subacromial bursa</strong> as they move through the space beneath the <strong>acromion</strong> (the bony roof of the shoulder).</p>
-
+<img
+    src="https://res.cloudinary.com/diiacrthz/image/upload/v1771918915/Impingement-Shoudler-Cover-1024x951_zp2ior.webp"
+    alt="shoulder anatomy shows tendon impingement"
+    loading="lazy"
+    decoding="async"
+  />
     <p>Pain is typically felt:</p>
     <ul>
       <li>At the front or outer side of the shoulder</li>
@@ -5191,25 +5196,25 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     <p>If you’re dealing with shoulder pain in <strong>Marion</strong>, <strong>Mitchell Park</strong>, or nearby suburbs, we’ll assess the true driver of your symptoms and build a clear step-by-step rehab plan to get you back to work, training, and daily life with confidence.</p>
   `,
   },
-{
-  id: 29,
-  slug: 'why-does-my-knee-hurt-common-causes-knee-pain-physiotherapy',
-  title: 'Why Does My Knee Hurt?',
-  excerpt:
-    'Knee pain is one of the most common reasons people seek physiotherapy. Learn the most common causes of knee pain, when to be concerned, and how physiotherapy can help you recover and move with confidence in Marion and Mitchell Park.',
-  author: 'Michael Ghattas',
-  date: 'January 23, 2026',
-  readTime: '8 min read',
-  metaDescription:
-    'Knee pain explained by physiotherapists. Learn common causes including patellofemoral pain, tendon issues, meniscus injuries, arthritis, and how physiotherapy helps in Marion & Mitchell Park.',
-  keywords:
-    'knee pain, knee pain physiotherapy, patellofemoral pain, meniscus injury, knee tendinopathy, ACL injury, MCL injury, knee arthritis, physiotherapist Marion, physiotherapy Mitchell Park, AlphaCare Physio',
-  image:
-    'https://res.cloudinary.com/diiacrthz/image/upload/v1769149754/middle_age_man_sitting_and_holding_left_knee_as_it_feels_tight_painful_oc2v3v.webp',
-  imageAlt:
-    'Person holding their left knee in discomfort while sitting, representing common knee pain',
-  relatedServiceId: "recovery",
-  content: `
+  {
+    id: 29,
+    slug: 'why-does-my-knee-hurt-common-causes-knee-pain-physiotherapy',
+    title: 'Why Does My Knee Hurt?',
+    excerpt:
+      'Knee pain is one of the most common reasons people seek physiotherapy. Learn the most common causes of knee pain, when to be concerned, and how physiotherapy can help you recover and move with confidence in Marion and Mitchell Park.',
+    author: 'Michael Ghattas',
+    date: 'January 23, 2026',
+    readTime: '8 min read',
+    metaDescription:
+      'Knee pain but not sure why? Physio guide to common causes — patellofemoral, tendon, meniscus, arthritis — with clear advice on what helps in Marion.',
+    keywords:
+      'knee pain, knee pain physiotherapy, patellofemoral pain, meniscus injury, knee tendinopathy, ACL injury, MCL injury, knee arthritis, physiotherapist Marion, physiotherapy Mitchell Park, AlphaCare Physio',
+    image:
+      'https://res.cloudinary.com/diiacrthz/image/upload/v1769149754/middle_age_man_sitting_and_holding_left_knee_as_it_feels_tight_painful_oc2v3v.webp',
+    imageAlt:
+      'Person holding their left knee in discomfort while sitting, representing common knee pain',
+    relatedServiceId: "recovery",
+    content: `
     <h2>Why Does My Knee Hurt? Common Causes of Knee Pain — and What to Do About It</h2>
 
     <p>Knee pain is one of the most common reasons people seek physiotherapy. It can come on suddenly after an injury, or slowly over time with everyday activities like walking, climbing stairs, or exercising.</p>
@@ -5330,7 +5335,7 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     author: 'Michael Ghattas',
     date: 'January 4, 2026',
     readTime: '5 min read',
-    metaDescription: 'Bulk billing physiotherapy in Marion explained. Learn about Medicare CDM (EPC) referrals, eligibility, and physiotherapy options at AlphaCare Physio..',
+    metaDescription: 'Can you get bulk-billed physio in Marion? Learn how Medicare CDM/EPC referrals work, who qualifies, and how AlphaCare minimises your out-of-pocket cost.',
     keywords: 'bulk billing physiotherapy marion, bulk bill physio marion, medicare physiotherapy marion, EPC physiotherapy marion, CDM physio marion, physiotherapist marion',
     image: 'https://res.cloudinary.com/diiacrthz/image/upload/v1769164174/bulk_billing_liu9ue.webp',
     imageAlt: 'Bulk billing physiotherapy consultation at AlphaCare Physio in Marion with Medicare CDM referral',
@@ -5471,14 +5476,14 @@ to discuss your options.
     date: 'January 10, 2026',
     readTime: '10 min read',
     metaDescription:
-      'Does it heal by itself? Learn how different tissues heal, why blood supply matters, and when physiotherapy or surgery may be required.',
+      'Will your injury heal on its own? Learn how muscles, tendons, cartilage, and nerves heal differently — and when physiotherapy is needed to get it right.',
     keywords:
       'does it heal by itself, tissue healing, bone healing, muscle healing, tendon pain, ligament injury, labral tear, cartilage damage, physiotherapy education',
     image:
       'https://res.cloudinary.com/diiacrthz/image/upload/v1770953566/does_it_heal_ixoogs.webp',
     imageAlt:
       'Medical illustration comparing healing rates of different body tissues',
-      relatedServiceId: "recovery",
+    relatedServiceId: "recovery",
 
     content: `
 <h2>Does it heal by itself?</h2>
@@ -5746,7 +5751,7 @@ a physiotherapy assessment can prevent long-term issues.
 </div>
 `,
   },
-{
+  {
     id: 32,
     slug: 'femoroacetabular-impingement-syndrome-fai-hip-groin-pain-treatment',
     title: 'Femoroacetabular Impingement Syndrome (FAI)',
@@ -5756,7 +5761,7 @@ a physiotherapy assessment can prevent long-term issues.
     date: 'February 13, 2026',
     readTime: '9 min read',
     metaDescription:
-      'Femoroacetabular impingement syndrome (FAI) explained: symptoms, causes, diagnosis, and modern treatment. Learn what helps hip/groin pain and when surgery is considered.',
+      'Hip or groin pain when squatting or sitting? FAI explained: types, symptoms, what scans show, physio treatment options, and when surgery is considered.',
     keywords:
       'FAI syndrome, femoroacetabular impingement, hip groin pain, cam pincer, hip impingement exercises, hip pinch, hip arthroscopy, physiotherapy hip pain',
     image:
@@ -6044,9 +6049,9 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
   </p>
 </div>
 `,
-}
-,
-{
+  }
+  ,
+  {
     id: 33,
     slug: "common-causes-of-neck-pain",
     title: "7 Common Causes of Neck Pain",
@@ -6056,7 +6061,7 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
     date: "February 14, 2026",
     readTime: "9 min read",
     metaDescription:
-      "Learn 7 common causes of neck pain (strain, posture, disc, arthritis, nerve irritation, whiplash, stress), practical relief strategies, red flags, and FAQs.",
+      "7 causes of neck pain explained by physios: muscle strain, disc issues, nerve irritation, arthritis, stress, and more. Red flags, tips, and when to seek help.",
     keywords:
       "neck pain causes, neck pain treatment, stiff neck, pinched nerve neck, cervical disc bulge, whiplash neck pain, text neck, neck arthritis, neck pain red flags",
     image:
@@ -6209,7 +6214,7 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
     date: 'February 14, 2026',
     readTime: '12 min read',
     metaDescription:
-      'A complete evidence-based guide to posture, desk pain, neck pain, and headaches. Learn what posture really means, common myths, and how physiotherapy restores movement and comfort.',
+      'Posture myths debunked. Evidence-based guide to desk pain, neck ache, and headaches — what research says, and what physiotherapy actually does that works.',
     keywords:
       'posture problems, posture pain myth, desk pain posture, neck pain posture, headaches posture, physiotherapy posture',
     image:
@@ -6418,25 +6423,25 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
   `
   },
   {
-  id: 35,
-  slug: 'post-workout-recovery-physio-guide',
-  title: 'Post-Workout Recovery',
-  excerpt:
-    'Recovery is where real progress happens. Learn how physiotherapists approach post-workout recovery, what actually works, and how to reduce soreness, improve performance, and prevent injury.',
-  author: 'AlphaCare Physiotherapy',
-  date: 'February 16, 2026',
-  readTime: '12 min read',
-  category: 'Recovery',
-  metaDescription:
-    'Physiotherapist-backed guide to post-workout recovery. Learn how sleep, nutrition, hydration, and load management help you recover faster, reduce soreness, and stay pain-free.',
-  keywords:
-    'post workout recovery, muscle recovery, physiotherapy recovery, exercise recovery, DOMS, sports physio adelaide, recovery after gym',
-  image:
-    'https://res.cloudinary.com/diiacrthz/image/upload/v1771229597/recovery_fym9ze.webp',
-  imageAlt:
+    id: 35,
+    slug: 'post-workout-recovery-physio-guide',
+    title: 'Post-Workout Recovery',
+    excerpt:
+      'Recovery is where real progress happens. Learn how physiotherapists approach post-workout recovery, what actually works, and how to reduce soreness, improve performance, and prevent injury.',
+    author: 'AlphaCare Physiotherapy',
+    date: 'February 16, 2026',
+    readTime: '12 min read',
+    category: 'Recovery',
+    metaDescription:
+      'Recover smarter, not just harder. Physio guide to sleep, nutrition, hydration, and load management — the four pillars that reduce soreness and prevent injury.',
+    keywords:
+      'post workout recovery, muscle recovery, physiotherapy recovery, exercise recovery, DOMS, sports physio adelaide, recovery after gym',
+    image:
+      'https://res.cloudinary.com/diiacrthz/image/upload/v1771229597/recovery_fym9ze.webp',
+    imageAlt:
       'recoverey pillars stretch, sleep, loading',
-  relatedServiceId: 'recovery',
-  content: `
+    relatedServiceId: 'recovery',
+    content: `
     <h2>Post-Workout Recovery: Why It Matters More Than You Think</h2>
     <p>
       Training is only half the equation. At <strong>AlphaCare Physiotherapy in Adelaide</strong>, we see it every day:
@@ -6565,7 +6570,143 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
       that support long-term progress — not just short-term symptom relief.
     </p>
   `
-}
+  },
+  {
+    id: 36,
+    slug: 'sciatica-physiotherapy-adelaide',
+    title: 'Sciatica Physiotherapy: What Actually Works (And What Doesn’t)',
+    excerpt:
+      'Sciatica causes shooting leg pain, numbness, or weakness from nerve irritation in the lower back. Learn what actually works, when MRI is needed, and how physiotherapy helps you recover faster.',
+    author: 'Michael Ghattas',
+    date: 'Feb 24, 2026',
+    readTime: '8 min read',
+    metaDescription:
+      'Sciatica in Adelaide? Learn the real causes, red flags, when MRI is needed, and how evidence-based physiotherapy helps relieve nerve pain and prevent recurrence.',
+    keywords:
+      'sciatica Adelaide, sciatic nerve pain, disc bulge L5 S1, piriformis syndrome, spinal stenosis, spondylolisthesis, physiotherapy sciatica Marion',
+    image:
+      'https://res.cloudinary.com/diiacrthz/image/upload/v1772075536/sciatic_pain_kgixy0.jpg',
+    imageAlt:
+      'Person holding lower back and leg indicating sciatic nerve pain',
+      relatedServiceId: 'neck-back',
+    content: `
+
+  <h1>Sciatica Treatment: What Truly Relieves Nerve Pain</h1>
+
+
+  <hr/>
+
+  <blockquote>
+    <strong>Quick Answer:</strong> Sciatica is nerve pain caused by irritation or compression of the sciatic nerve — most commonly from a lumbar disc bulge. Evidence-based physiotherapy is the recommended first-line treatment, and most people improve significantly within 6–12 weeks without surgery.
+  </blockquote>
+
+  <h2>What Is Sciatica? (And What Most People Get Wrong)</h2>
+
+  <p>Sciatica isn’t a diagnosis — it’s a <strong>symptom pattern</strong>.</p>
+
+  <p>It describes pain, numbness, tingling, or weakness that travels from the lower back or buttock down the back of the thigh and leg — sometimes into the foot. The pain follows the path of the sciatic nerve, which forms from nerve roots at L4–S1 in the lower spine.</p>
+
+  <p>The key question is: <strong>what’s irritating the nerve?</strong></p>
+
+  <p>At AlphaCare Physiotherapy in Mitchell Park, we identify the exact source of nerve irritation because treatment differs depending on the cause.</p>
+
+  <h2>What Does Sciatica Actually Feel Like?</h2>
+
+  <ul>
+    <li>Burning or electric shock–like pain shooting down one leg</li>
+    <li>Deep buttock ache worse after 10–15 minutes of sitting</li>
+    <li>Pins and needles in the calf or foot</li>
+    <li>Leg weakness (difficulty pushing off when walking)</li>
+    <li>Morning stiffness or pain after rest</li>
+    <li>Relief with gentle walking but worse with bending or lifting</li>
+  </ul>
+
+  <p>Sciatica usually affects one side. If symptoms occur in both legs, or you notice bladder/bowel changes or groin numbness, seek urgent medical care.</p>
+
+  <h2>The 4 Most Common Causes of Sciatica</h2>
+
+  <h3>1. Lumbar Disc Bulge or Herniation (Most Common)</h3>
+
+  <img src="https://www.researchgate.net/publication/323121927/figure/fig6/AS%3A668395657756679%401536369351418/Lumbar-Disc-Herniation-a-Showing-herniated-disc-at-L4-L5-level-14-b-Shows-normal.png" alt="L4 L5 disc herniation comparison" />
+
+  <p>The intervertebral discs act as shock absorbers. When a disc bulges (commonly at L4/L5 or L5/S1), it can compress the exiting nerve root.</p>
+
+  <ul>
+    <li>Worse with sitting or bending</li>
+    <li>Pain with coughing or sneezing</li>
+    <li>Often affects people aged 30–55</li>
+  </ul>
+
+  <h3>2. Piriformis Syndrome (Deep Gluteal Syndrome)</h3>
+
+  <img src="https://www.mdpi.com/diagnostics/diagnostics-15-02531/article_deploy/html/images/diagnostics-15-02531-g002.png" alt="Sciatic nerve under piriformis muscle" />
+
+  <p>The sciatic nerve passes beneath (and sometimes through) the piriformis muscle. Tightness or inflammation here can compress the nerve.</p>
+
+  <ul>
+    <li>Deep buttock tenderness</li>
+    <li>Worse going from sitting to standing</li>
+    <li>Often linked to prolonged sitting or running</li>
+  </ul>
+
+  <h3>3. Lumbar Spinal Stenosis</h3>
+
+  <img src="https://res.cloudinary.com/diiacrthz/image/upload/v1772075153/stenosis_verterbra_cgekfa.webp" alt="Spinal canal narrowing illustration" />
+
+  <p>Age-related narrowing of the spinal canal can compress nerve roots.</p>
+
+  <ul>
+    <li>Worse with walking or standing</li>
+    <li>Relief when sitting or leaning forward</li>
+    <li>More common over age 60</li>
+  </ul>
+
+  <h3>4. Spondylolisthesis</h3>
+
+  <img src="https://res.cloudinary.com/diiacrthz/image/upload/v1772075066/spine_degenerative_whaigk.webp" alt="Vertebral slippage diagram" />
+
+  <p>One vertebra slips forward over the one below it, irritating nearby nerves.</p>
+
+  <ul>
+    <li>Long-standing back pain history</li>
+    <li>Gradual development of leg symptoms</li>
+  </ul>
+
+  <h2>Does Sciatica Go Away on Its Own?</h2>
+
+  <ul>
+    <li>~90% improve within 6–12 weeks</li>
+    <li>Bed rest does not improve outcomes</li>
+    <li>Staying active improves recovery</li>
+    <li>Physiotherapy reduces recurrence risk</li>
+  </ul>
+
+  <h2>How We Assess Sciatica</h2>
+
+  <ul>
+    <li>Detailed history</li>
+    <li>Neural testing (SLR, Slump)</li>
+    <li>Spinal movement assessment</li>
+    <li>Strength and sensation testing</li>
+    <li>Postural analysis</li>
+  </ul>
+
+  <h2>What Actually Works</h2>
+
+  <ul>
+    <li>Manual therapy</li>
+    <li>Neural mobilisation</li>
+    <li>Targeted strengthening</li>
+    <li>Ergonomic advice</li>
+    <li>Education and load management</li>
+  </ul>
+
+  <h2>Do You Need an MRI?</h2>
+
+  <p>Usually no. Imaging is considered if progressive weakness, severe neurological deficit, or no improvement after 6–8 weeks.</p>
+
+  `
+  }
 
 
 
