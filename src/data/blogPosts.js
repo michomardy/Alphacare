@@ -6591,7 +6591,7 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
       relatedServiceId: 'neck-back',
     content: `
 
-  <h1>Sciatica Treatment: What Truly Relieves Nerve Pain</h1>
+  <h1>Struggling with shooting leg pain, numbness, or weakness?</h1>
 
 
   <hr/>
