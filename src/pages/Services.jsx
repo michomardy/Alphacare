@@ -251,9 +251,9 @@ const CONDITION_ARTICLES = {
       to: "/blog/posture-problems-physiotherapy",
     },
     {
-      title: "When should you see a physiotherapist for back pain?",
-      desc: "Red flags, timelines, and when assessment makes a difference.",
-      to: "/blog/when-to-see-a-physiotherapist",
+      title: "Sciatica pain?",
+      desc: "What works best for nerve pain?.",
+      to: "/blog/sciatica-physiotherapy-adelaide",
     },
   ],
   "Muscle Recovery": [
