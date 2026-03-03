@@ -290,7 +290,7 @@ Imaging is more appropriate when there are:
 <h2>How Physiotherapy Helps Mechanical Back Pain</h2>
 
 <p>
-Physiotherapy is a first-line treatment for mechanical back pain.
+Physiotherapy is a <a href="/blog/evidence-based-physiotherapy-marion">first-line treatment</a> for mechanical back pain.
 </p>
 
 <ul>
@@ -563,7 +563,7 @@ Physiotherapy addresses the <strong>why</strong>, not just the <strong>where</st
 <h2>Common Sports Injuries Physiotherapy Treats Effectively</h2>
 
 <ul>
-  <li>Muscle strains (hamstring, calf, groin)</li>
+  <li>Muscle strains (<a href="/blog/hamstring-muscle-tear-physiotherapy-marion">hamstring</a>, calf, groin)</li>
   <li>Tendon injuries (Achilles, patellar, rotator cuff)</li>
   <li>Ankle sprains</li>
   <li>Knee injuries</li>
@@ -1869,7 +1869,7 @@ This may include:
 </p>
 
 <ul>
-  <li>Temporarily reducing running volume</li>
+  <li>Temporarily reducing <a href="/blog/strength-training-runners-physio-prevention">running volume</a></li>
   <li>Limiting hills, speed work, or jumping</li>
   <li>Maintaining pain-tolerable activity</li>
 </ul>
@@ -2604,7 +2604,7 @@ and built to last.
   <li>Achilles tendinopathy</li>
   <li>Patellofemoral (kneecap) pain</li>
   <li>ITB-related lateral knee pain</li>
-  <li>Shin splints</li>
+  <li><a href="/blog/shin-splints-vs-stress-fracture">Shin splints</a></li>
   <li>Hamstring and calf strains</li>
   <li>Lower back and hip pain</li>
 </ul>
@@ -2735,7 +2735,7 @@ and built to last.
   <li><strong>Active movement</strong> (when you move your arm yourself)</li>
   <li><strong>Passive movement</strong> (when someone else moves your arm for you)</li>
 </ul>
-<p>This helps physiotherapists distinguish frozen shoulder from conditions like rotator cuff tendinopathy, where passive movement is often less limited.</p>
+<p>This helps physiotherapists distinguish frozen shoulder from conditions like <a href="/blog/shoulder-impingement-subacromial-pain-syndrome-physiotherapy">rotator cuff tendinopathy</a>, where passive movement is often less limited.</p>
 
 <h3>Who is most at risk?</h3>
 <p>Frozen shoulder is more common in:</p>
@@ -2876,7 +2876,7 @@ and built to last.
 <p>A muscle tear occurs when muscle fibres are <strong>overstretched or overloaded</strong>, causing damage ranging from tiny micro-tears to more significant fibre disruption. These injuries often occur during fast or powerful movements — especially when a muscle is <strong>lengthening under load</strong> (eccentric loading), such as sprinting, jumping, or decelerating.</p>
 <p>Common areas affected include:</p>
 <ul>
-  <li>Hamstrings</li>
+  <li><a href="/blog/hamstring-muscle-tear-physiotherapy-marion">Hamstrings</a></li>
   <li>Calves</li>
   <li>Quadriceps</li>
   <li>Groin muscles</li>
@@ -3798,7 +3798,7 @@ if you have any questions before booking.
     <h3>Tendon pain</h3>
     <p>
       Tendons respond best to progressive strengthening.
-      Stretching alone does not restore tendon capacity.
+      Stretching alone does not restore <a href="/blog/achilles-tendinopathy-physiotherapy-management">tendon capacity</a>.
     </p>
 
     <h2>Does This Mean Stretching Is Useless?</h2>
@@ -4059,14 +4059,7 @@ if you have any questions before booking.
       <h3>Strength & Mobility Work</h3>
       <p>Perform calf strengthening, glute activation, and ankle stability work 3-4 times per week. Don't forget dynamic stretching before runs! 🏃</p>
 
-      <h2>Book a Running Injury Assessment at AlphaCare Physio</h2>
-      <p>Our expert physiotherapists specialize in running injuries and serve the local Adelaide running community. We use an evidence-based approach to get you running pain-free.</p>
-      
-      <div class="text-center my-8">
-        <a href="/booking" class="inline-block bg-physio-blue text-white font-bold py-3 px-8 rounded-full hover:bg-physio-blue-dark transition-colors no-underline text-lg shadow-lg">Book Your Running Assessment Now</a>
-      </div>
-
-      <h2>Shin Splints FAQs</h2>
+          <h2>Shin Splints FAQs</h2>
       
       <h3>Q: Can I Keep Running With Shin Splints?</h3>
       <p><strong>A:</strong> Complete rest isn't always necessary, but activity modification is crucial. We generally say pain should not exceed 3/10 during activity. We often recommend cross-training (cycling, swimming) to maintain fitness while the bone heals.</p>
@@ -4883,7 +4876,7 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     <h3>2) Neck Pain with Headaches (Cervicogenic Headache)</h3>
     <p>
       Some headaches originate from the neck rather than the head itself.
-      These are known as cervicogenic headaches.
+      These are known as <a href="/blog/tmj-dysfunction-physiotherapy-treatment">cervicogenic headaches</a>.
     </p>
 
     <p>
@@ -5277,7 +5270,7 @@ emphasise exercise, reassurance, and graded return to activity.</p>
     <p>Symptoms may include pain, swelling, or a feeling of instability. Physiotherapy plays a key role in both non-surgical and post-surgical recovery.</p>
 
     <h3>6) Arthritis and Age-Related Changes</h3>
-    <p><strong>Osteoarthritis</strong> is a common cause of knee pain, particularly as we get older.</p>
+    <p><strong><a href="/blog/knee-osteoarthritis-exercises-physio">Osteoarthritis</a></strong> is a common cause of knee pain, particularly as we get older.</p>
 
     <p>Typical symptoms include:</p>
     <ul>
@@ -5698,36 +5691,45 @@ That gap is why re-injury is so common.
   </div>
 </div>
 
-<h2>Frequently asked questions</h2>
+<h2 id="faq">FAQ</h2>
 
-<h3>Does cartilage heal by itself?</h3>
-<p>
-In most cases, no. Cartilage has minimal blood supply and very limited regenerative capacity.
-Management focuses on load control and joint health.
-</p>
+<details>
+  <summary><strong>Does cartilage heal by itself?</strong></summary>
+  <p>
+    In most cases, no. Cartilage has minimal blood supply and very limited regenerative capacity.
+    Management focuses on load control and joint health.
+  </p>
+</details>
 
-<h3>Why does tendon pain last so long?</h3>
-<p>
-Tendons adapt slowly due to poor blood supply.
-Pain often reflects reduced capacity rather than active damage.
-</p>
+<details>
+  <summary><strong>Why does tendon pain last so long?</strong></summary>
+  <p>
+    Tendons adapt slowly due to poor blood supply.
+    Pain often reflects reduced capacity rather than active damage.
+  </p>
+</details>
 
-<h3>Can a labral tear heal without surgery?</h3>
-<p>
-The tissue rarely heals structurally, but many people become symptom-free with rehabilitation.
-</p>
+<details>
+  <summary><strong>Can a labral tear heal without surgery?</strong></summary>
+  <p>
+    The tissue rarely heals structurally, but many people become symptom-free with rehabilitation.
+  </p>
+</details>
 
-<h3>Why does pain improve before healing is complete?</h3>
-<p>
-Pain is influenced by inflammation and nervous system sensitivity, which often improve before
-tissue strength returns.
-</p>
+<details>
+  <summary><strong>Why does pain improve before healing is complete?</strong></summary>
+  <p>
+    Pain is influenced by inflammation and nervous system sensitivity, which often improve before
+    tissue strength returns.
+  </p>
+</details>
 
-<h3>Should I rest completely until healing is finished?</h3>
-<p>
-Usually not. Most tissues heal better with controlled movement and progressive loading.
-</p>
-
+<details>
+  <summary><strong>Should I rest completely until healing is finished?</strong></summary>
+  <p>
+    Usually not. Most tissues heal better with controlled movement and progressive loading.
+  </p>
+</details>
 <h2>So… does it heal by itself?</h2>
 
 <p>
@@ -6604,7 +6606,7 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
 
   <p>Sciatica isn’t a diagnosis — it’s a <strong>symptom pattern</strong>.</p>
 
-  <p>It describes pain, numbness, tingling, or weakness that travels from the lower back or buttock down the back of the thigh and leg — sometimes into the foot. The pain follows the path of the sciatic nerve, which forms from nerve roots at L4–S1 in the lower spine.</p>
+  <p>It describes pain, numbness, tingling, or weakness that travels from the <a href="/blog/mechanical-vs-non-mechanical-back-pain">lower back</a> or buttock down the back of the thigh and leg — sometimes into the foot. The pain follows the path of the sciatic nerve, which forms from nerve roots at L4–S1 in the lower spine.</p>
 
   <p>The key question is: <strong>what’s irritating the nerve?</strong></p>
 
