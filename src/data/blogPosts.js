@@ -6627,7 +6627,7 @@ This is not about avoiding movement forever. It’s about dosing it correctly wh
 
   <h3>1. Lumbar Disc Bulge or Herniation (Most Common)</h3>
 
-  <img src="https://www.researchgate.net/publication/323121927/figure/fig6/AS%3A668395657756679%401536369351418/Lumbar-Disc-Herniation-a-Showing-herniated-disc-at-L4-L5-level-14-b-Shows-normal.png" alt="L4 L5 disc herniation comparison" />
+  <img src="https://res.cloudinary.com/diiacrthz/image/upload/v1772511093/bulging-vs-herniated-disc_sq5d7l.jpg" alt="L4 L5 disc herniation comparison" />
 
   <p>The intervertebral discs act as shock absorbers. When a disc bulges (commonly at L4/L5 or L5/S1), it can compress the exiting nerve root.</p>
 
