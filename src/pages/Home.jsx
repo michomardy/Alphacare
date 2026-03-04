@@ -379,7 +379,7 @@ const Home = () => {
               className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg shadow-physio-neutral-300 border border-physio-neutral-200"
             >
               <img
-                src="https://res.cloudinary.com/diiacrthz/image/upload/v1769256593/Alphacare_1_rgbmns.webp"
+                src="https://res.cloudinary.com/diiacrthz/image/upload/v1772591935/clinic_oegbc7.webp"
                 alt="AlphaCare physiotherapy clinic exterior"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
